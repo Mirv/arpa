@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Noshows</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amessage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @noshows.each do |noshow| %>
+      <tr>
+        <td><%= noshow.amessage %></td>
+        <td><%= link_to 'Show', noshow %></td>
+        <td><%= link_to 'Edit', edit_noshow_path(noshow) %></td>
+        <td><%= link_to 'Destroy', noshow, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Noshow', new_noshow_path %>

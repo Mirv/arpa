@@ -1,0 +1,2 @@
+class Noshow < ApplicationRecord
+end

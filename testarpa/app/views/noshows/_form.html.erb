@@ -1,0 +1,22 @@
+<%= form_with(model: noshow, local: true) do |form| %>
+  <% if noshow.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(noshow.errors.count, "error") %> prohibited this noshow from being saved:</h2>
+
+      <ul>
+      <% noshow.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :amessage %>
+    <%= form.text_field :amessage, id: :noshow_amessage %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

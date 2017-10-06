@@ -1,0 +1,22 @@
+<%= form_with(model: shower, local: true) do |form| %>
+  <% if shower.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(shower.errors.count, "error") %> prohibited this shower from being saved:</h2>
+
+      <ul>
+      <% shower.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :welcomer %>
+    <%= form.text_field :welcomer, id: :shower_welcomer %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
