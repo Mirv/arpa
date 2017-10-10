@@ -16,6 +16,8 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  # mirv replaced above with below - some in directly not being found
+  # spec.test_files    = Dir["#{File.dirname(__FILE__)}/spec\/*"].each { |f| load(f) }
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency 'bundler', '~> 1.7'
