@@ -54,6 +54,7 @@ end
 group :test do
   gem 'minitest-rails-capybara'
   gem 'minitest-reporters'
+  gem 'rspec'
 end
 
 group :production do
@@ -70,3 +71,4 @@ group :development do
   # gem 'spring'
 end
 
+gem "rspec-rails", :group => [:development, :test]

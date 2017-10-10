@@ -14,6 +14,9 @@ I18n.config.enforce_available_locales = true
 I18n.load_path << File.expand_path('../../lib/config/locales/arpa.en.yml', __FILE__)
 I18n.reload!
 
+# mirv addition
+# require File.expand_path("../../spec/dummy/config/environment", __FILE__) # no help by self #1
+
 RSpec.configure do |config|
 
   config.include FactoryGirl::Syntax::Methods
